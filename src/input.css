@@ -1,0 +1,27 @@
+@tailwind base;
+/* base buat nge reset, ok paham */
+@tailwind components;
+/* minta komponen dari komponen tailwind nya */
+@tailwind utilities;
+/* daftar kelas utility sebelum jadi file css baru */
+
+@layer base {
+  h6 {
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  h5 {
+    @apply text-5xl font-bold;
+  }
+}
+
+@layer components {
+  .grid-card {
+    @apply rounded-lg overflow-hidden aspect-[4/3] hover:scale-95 transition-transform duration-1000 ease-out tscreen:aspect-auto;
+  }
+
+  .img-card-content {
+    @apply w-full h-full object-cover group-hover:scale-125 transition-transform duration-[1s] ease-out;
+  }
+}
